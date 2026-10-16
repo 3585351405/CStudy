@@ -180,7 +180,7 @@ int main() {
 	//int a = ADD(5, 3); // 调用宏定义，计算两个数的和)
 
 	//int* a = Func();
-	print("Hello, %s! You have %d new messages.\n", "Alice", 5);
+	print("Hello, %s! You have %d new messages.\n", "Alice", 6);
 	
 
 	
