@@ -39,6 +39,9 @@ int main() {
 		arry[i] = ptr[i];
 		printf("%d\n", arry[i]);
 	}
+
+
+	free(ptr)	; // 释放动态分配的内存
 	
 
 	
