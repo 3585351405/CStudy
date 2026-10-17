@@ -239,7 +239,16 @@ int main() {
 
 	printf("Value of e: %d\n"	, ***ptr8); // 输出 e 的值
 	
-	
+	//（指针-指针）/ sizeof(type) 
+
+	short* p1 = (short*)20;
+	short* p2 = (short*)40;
+
+	int p3 = p2 - p1;
+
+	printf("Pointer difference: %d\n", p3); // 输出指针差值
+
+
 
 	
 	
