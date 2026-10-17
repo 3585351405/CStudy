@@ -228,6 +228,16 @@ int main() {
 	printf("First element: %d\n", *ptr5); // 输出第一个元素的值)
 	
 	printf("Second element: %d\n",(( *(ptr5+1) )) ); // 输出第二个元素的值)
+
+
+
+	//多级指针
+	short e = 0;
+	short* ptr6 = &e; // 定义一个指针变量 ptr6，指向 e 的地址
+	short** ptr7 = &ptr6; // 定义一个二级指针变量 ptr7，指向 ptr6 的地址
+	short*** ptr8 = &ptr7; // 定义一个三级指针变量 ptr8，指向 ptr7 的地址
+
+	printf("Value of e: %d\n"	, ***ptr8); // 输出 e 的值
 	
 	
 
