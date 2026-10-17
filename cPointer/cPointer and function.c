@@ -223,7 +223,12 @@ int main() {
 
 	//ptr4 = &a; // 错误，不能修改指针常量的值
 	//*ptr4 = 60; // 错误，不能修改常量指针指向的值
-
+	short arry[5] = { 2,3,4,5,6 };
+	short* ptr5 = arry; // 定义一个指针变量 ptr5，指向数组 arry 的首元素
+	printf("First element: %d\n", *ptr5); // 输出第一个元素的值)
+	
+	printf("Second element: %d\n",(( *(ptr5+1) )) ); // 输出第二个元素的值)
+	
 	
 
 	
