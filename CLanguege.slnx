@@ -4,6 +4,7 @@
     <Platform Name="x86" />
   </Configurations>
   <Project Path="CLanguege/CLanguege.vcxproj" Id="61ed8f0f-9905-4b1f-ac5a-93cac1599993" />
+  <Project Path="Cmemory/Cmemory.vcxproj" Id="ed56e9db-a733-4bfd-863d-5b4d6f9ddba7" />
   <Project Path="cPointer/cPointer.vcxproj" Id="03a839d1-3d47-4995-a132-b188c70a2fcf" />
   <Project Path="cStruct/cStruct.vcxproj" Id="4abb0eaf-33bb-489e-8c8a-0e7156206b43" />
 </Solution>
