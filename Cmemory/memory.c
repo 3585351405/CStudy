@@ -29,6 +29,12 @@ int* Fun1() {
 
 //calloc() 函数用于动态分配内存，并将分配的内存初始化为零。它接受两个参数：要分配的元素数量和每个元素的大小（以字节为单位）。calloc() 返回一个指向分配内存块的指针，如果分配失败，则返回 NULL。
 //void* calloc(size_t num_elements, size_t element_size);
+
+
+//设置内存块的值为指定的值。它接受三个参数：指向要设置的内存块的指针、要设置的值以及要设置的字节数。memset() 返回一个指向内存块的指针。
+//void* memset(void* ptr, int value, size_t num_bytes);
+//memcpy() 函数用于将一个内存块的内容复制到另一个内存块。它接受三个参数：指向目标内存块的指针、指向源内存块的指针以及要复制的字节数。memcpy() 返回一个指向目标内存块的指针。
+//void* memcpy(void* dest, const void* src, size_t num_bytes);
 int main() {
 	int arry[5] = { 0 };
 
