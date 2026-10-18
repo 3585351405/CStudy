@@ -7,6 +7,15 @@
 #define ADD(a, b) ((a) + (b)) // 宏定义，计算两个数的和,可以节省大量汇编代码，快速
 
 
+#include "malloc.h"
+
+
+int Fun2(int a, int b) {
+	return a + b;
+
+}
+
+
 //int* modify(int* p) {
 //	return p;
 // }
@@ -282,6 +291,42 @@ int main() {
 
 
 	printf("差值： %d\n", (char*)ptr10 - (char*)ptr11); // 输出数组指针的差值
+
+
+	//指针函数
+
+	int* heap_arr = HeapRequest(5);
+
+
+	if (heap_arr == NULL) {
+		printf("内存分配失败！\n");
+	}
+
+
+	else {
+		printf("%d", heap_arr[0]); // 输出第一个元素的值
+
+		free(heap_arr); // 释放动态分配的内存
+
+		heap_arr = NULL; // 将指针置为空，避免悬空指针
+	}
+
+
+	//函数指针
+
+
+	int(*p)(int, int) = Fun2; // 定义一个函数指针，指向 Fun2 函数
+
+	a = p(5, 3); // 调用函数指针，传递参数 5 和 3)
+	
+
+	
+
+	
+
+	
+
+	
 
 
 

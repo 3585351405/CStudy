@@ -142,9 +142,11 @@
   <ItemGroup>
     <ClCompile Include="cacl.c" />
     <ClCompile Include="cPointer and function.c" />
+    <ClCompile Include="malloc.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cacl.h" />
+    <ClInclude Include="malloc.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
