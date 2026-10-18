@@ -318,6 +318,10 @@ int main() {
 	int(*p)(int, int) = Fun2; // 定义一个函数指针，指向 Fun2 函数
 
 	a = p(5, 3); // 调用函数指针，传递参数 5 和 3)
+
+	
+    printf("%p\n", p); // 输出函数Fun2的地址
+	printf("%p\n", &Fun2);
 	
 
 	
