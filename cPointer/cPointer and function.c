@@ -249,7 +249,49 @@ int main() {
 	printf("Pointer difference: %d\n", p3); // 输出指针差值
 
 
+	//指针数组
 
+
+
+	int* arr[5] = {0}; // 定义一个指针数组，包含三个指针元素
+
+	//int f = 0;
+	//int g = 2;
+	//int h = 4;
+
+
+	//arr[0] = &f; // 将第一个指针元素指向 f 的地址
+	//printf("Value of g: %d\n", *(arr[1])); // 输出 g 的值)
+	//arr[2] = &h; // 将第三个指针元素指向 h 的地址
+	//printf("Value of h: %d\n", *(arr[2])); // 输出 h 的值)
+
+
+
+
+	//数组指针
+
+
+	int (*ptr10)[5] = arry; // 定义一个数组指针，指向包含 5 个整数的数组的首元素
+
+
+
+	printf("原地址： %p\n", ptr10);
+	int* ptr11 = (int*)ptr10++;
+
+	printf("++之后地址： %p\n", ptr11);
+
+
+	printf("差值： %d\n", (char*)ptr10 - (char*)ptr11); // 输出数组指针的差值
+
+
+
+
+
+
+
+
+
+	
 	
 	
 
