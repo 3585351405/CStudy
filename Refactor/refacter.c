@@ -18,7 +18,15 @@ int main() {
 
 	int d = MySizeOf(c);
 
-	printf("%d %d", b,d);
+	printf("%d %d \n", b,d);
+
+
+	int n_count = Mystrlen("Hello");
+
+	printf("%d  \n ", n_count);
+
+
+
 
 
 
