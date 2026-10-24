@@ -1,12 +1,29 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 
 
 
 //sizeof 重构
 
+
+//strlen重构
+
+
+int Mystrlen(const char* string) {
+	int n_count = 0;
+	for (;*string != '\0'; *string++)
+	{
+		n_count++;
+	}
+	return n_count;
+}
+
 #define MySizeOf(x)  ( (char*)(&x + 1) - (char*)(&x) )
+
+
+
 int main() {
 	//sizeof
 
