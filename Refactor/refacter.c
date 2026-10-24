@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+#define MAX 50;
+
 
 //strcmp 重构
 
@@ -11,8 +13,8 @@ int Mystrcmp(const char* str1,const char* str2){
 			return *str1 - *str2;
 		}
 
-		*str1++;
-		*str2++;
+		str1++;
+		str2++;
 	}
 
 	return *str1 - *str2;
@@ -39,6 +41,32 @@ int Mystrlen(const char* string) {
 #define MySizeOf(x)  ( (char*)(&x + 1) - (char*)(&x) )
 
 
+//strcat重构
+
+
+char* Mystrcat(char* str1 , char* str2) {
+
+	char* mem = str1;
+	while (*mem != '\0') {
+		mem++;
+
+
+
+	}
+	while (*str2 != '\0') {
+		*mem = *str2;
+		str2++;
+		mem++;
+	}
+	*mem = '\0';
+
+	return str1;
+
+
+
+}
+
+
 
 int main() {
 	//sizeof
@@ -60,8 +88,16 @@ int main() {
 
 
 	int h = Mystrcmp("Hello", "AP");
-	printf("cmp %d", h);
+	printf("cmp %d \n", h);
 
+
+	char arry1[50] = "hello";
+
+	char arry2[50] = "hello1";
+
+	char* arry3 = Mystrcat(arry1, arry2);
+
+	printf("%s", arry3);
 
 
 
