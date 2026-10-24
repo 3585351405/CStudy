@@ -3,6 +3,22 @@
 #include <string.h>
 
 
+//strcmp 重构
+
+int Mystrcmp(const char* str1,const char* str2){
+	while (*str1 && *str2) {
+		if (*str1 != *str2) {
+			return *str1 - *str2;
+		}
+
+		*str1++;
+		*str2++;
+	}
+
+	return *str1 - *str2;
+
+}
+
 
 
 //sizeof 重构
@@ -41,6 +57,12 @@ int main() {
 	int n_count = Mystrlen("Hello");
 
 	printf("%d  \n ", n_count);
+
+
+	int h = Mystrcmp("Hello", "AP");
+	printf("cmp %d", h);
+
+
 
 
 
