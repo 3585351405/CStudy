@@ -6,6 +6,19 @@
 
 
 
+
+//联合体
+
+
+union person {
+	char a ;
+	short age;
+	int score;
+
+
+
+};
+//联合体的特性：  整个联合体公用同个内存   整个内存取决于其中最大的变量类型所占的空间
 //enum 枚举变量
 
 
@@ -117,6 +130,10 @@ int main() {
 
 	printf("%s", arry3);
 	
+	union person p1;
+	p1.a = 65;
+	p1.age = 1;
+	p1.score = 65;
 
 
 
