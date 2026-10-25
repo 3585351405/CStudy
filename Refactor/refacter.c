@@ -4,7 +4,11 @@
 
 #define MAX 50;
 
+int Fun3(int a, int b) {
 
+	return a + b;
+
+}
 
 
 //联合体
@@ -157,10 +161,25 @@ int main() {
 
 
 
-	} 动物 ,* 动物;
+	} 动物 ,* 动物1;
 
 
 	动物 狗 = { 1 };
+
+	动物1 狗2 = &狗;
+
+
+	//函数指针
+
+	 typedef int (*point) (int, int);
+
+	 //此时point就相当于定义上一条件的所有类别；
+	 point 加法 = Fun3;
+
+
+
+
+	
 
 
 
