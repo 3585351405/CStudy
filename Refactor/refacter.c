@@ -5,6 +5,24 @@
 #define MAX 50;
 
 
+
+//enum 枚举变量
+
+
+enum THREAD_STATE {
+	THREAD_EXIT,
+	THREAD_RUNNING,
+
+
+
+	//声明常量   且后面往后递增一       整数   方便维护
+	
+
+
+
+};
+
+
 //strcmp 重构
 
 int Mystrcmp(const char* str1,const char* str2){
@@ -98,6 +116,7 @@ int main() {
 	char* arry3 = Mystrcat(arry1, arry2);
 
 	printf("%s", arry3);
+	
 
 
 
