@@ -171,10 +171,14 @@ int main() {
 
 	//函数指针
 
-	 typedef int (*point) (int, int);
+	 typedef int (*函数指针) (整型, 整型);
 
 	 //此时point就相当于定义上一条件的所有类别；
-	 point 加法 = Fun3;
+	 函数指针 加法 = Fun3;
+
+
+
+	 加法(11,12);
 
 
 
