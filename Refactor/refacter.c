@@ -206,22 +206,41 @@ int main() {
 
 
 	 if(error == 0){ 
+
+
+		 fseek(Pfile, 0, SEEK_END);
+		 long filesize = ftell(Pfile);
+		 fseek(Pfile, 0, SEEK_SET);
 		 
-			//读文件
-			char ch = 0;
-			printf("\n");
-			while ((ch = fgetc(Pfile)) != EOF) {
-			 printf("%c", ch);
-			}
 
-			fseek(Pfile, 0, SEEK_SET);   //将指针修正到文件头部分
 
-			char pointer[256] = { 0 };
-			printf("\n");
-			while (fgets(pointer, 256, Pfile) != NULL) {
-			    printf("%s", pointer);
-			}
-		    fclose(Pfile); 
+		 char * Pbuffer = malloc(filesize);
+		 if (Pbuffer  == NULL) {
+			 exit ;
+		 }
+		 memset(Pbuffer, 0, filesize+10);
+
+		 fread(Pbuffer, filesize, 1, Pfile); //读取数据
+
+		 printf("%s", Pbuffer);
+
+
+			 
+			////读文件
+			//char ch = 0;
+			//printf("\n");
+			//while ((ch = fgetc(Pfile)) != EOF) {
+			// printf("%c", ch);
+			//}
+
+			//fseek(Pfile, 0, SEEK_SET);   //将指针修正到文件头部分
+
+			//char pointer[256] = { 0 };
+			//printf("\n");
+			//while (fgets(pointer, 256, Pfile) != NULL) {
+			//    printf("%s", pointer);
+			//}
+		    //   fclose(Pfile); 
 	 
 	 }
 
