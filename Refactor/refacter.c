@@ -191,8 +191,9 @@ int main() {
 
 
 	 //打开文件
-
 	
+	 SetConsoleCP(65001);
+	 SetConsoleOutputCP(65001);
 
 	 FILE* Pfile = NULL;
 
