@@ -192,11 +192,11 @@ int main() {
 
 	 //打开文件
 
-
+	
 
 	 FILE* Pfile = NULL;
 
-	 int  error = fopen_s(&Pfile,"D:\\haker\\123.txt", "r");
+	 int  error = fopen_s(&Pfile,"D:\\haker\\123.txt", "r,ccs=UTF-8");
 	 printf("\n%d\n", error);
 
 	 //printf("\n%p\n", f);
@@ -206,28 +206,41 @@ int main() {
 
 
 	 if(error == 0){ 
+		 //fseek(Pfile, 0, SEEK_SET);
+		 //wchar_t file[256] = { 0 };
+		 //while ((fgetws(file, 256, Pfile)) != NULL) {
+
+			// wprintf(L"%s", file);  
+		 //}
+
+		 //int file[] = { 10,20,30 };
 
 
-		 fseek(Pfile, 0, SEEK_END);
-		 long filesize = ftell(Pfile);
-		 fseek(Pfile, 0, SEEK_SET);
+		 //int* file1 = file;
+
+		 //fprintf(Pfile, "%d %d %d", file[0], file[1], file[2]);
+		 //fseek(Pfile, 0, SEEK_END);
+		 //long filesize = ftell(Pfile);
+		 //fseek(Pfile, 0, SEEK_SET);
+		 //
+
+
+		 //char * Pbuffer = malloc(filesize);
+		 //if (Pbuffer  == NULL) {
+			// exit ;
+		 //}
+		 //memset(Pbuffer, 0, filesize+10);
+
+		 //fread(Pbuffer, filesize, 1, Pfile); //读取数据
+
+		 //printf("%s", Pbuffer);
+
+
 		 
-
-
-		 char * Pbuffer = malloc(filesize);
-		 if (Pbuffer  == NULL) {
-			 exit ;
-		 }
-		 memset(Pbuffer, 0, filesize+10);
-
-		 fread(Pbuffer, filesize, 1, Pfile); //读取数据
-
-		 printf("%s", Pbuffer);
-
-
+		 
 			 
-			////读文件
-			//char ch = 0;
+			
+			//int ch = 0;
 			//printf("\n");
 			//while ((ch = fgetc(Pfile)) != EOF) {
 			// printf("%c", ch);
