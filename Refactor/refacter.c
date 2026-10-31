@@ -197,7 +197,7 @@ int main() {
 
 	 FILE* Pfile = NULL;
 
-	 int  error = fopen_s(&Pfile,"D:\\haker\\123.txt", "r,ccs=UTF-8");
+	 int  error = fopen_s(&Pfile,"D:\\haker\\123.txt", "r");
 	 printf("\n%d\n", error);
 
 	 //printf("\n%p\n", f);
@@ -260,8 +260,10 @@ int main() {
 
 	 else if (error != 0) {
 		 printf("打开文件失败");
+
 	 }
 	 
+
 
 
 
