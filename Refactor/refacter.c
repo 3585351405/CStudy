@@ -1,4 +1,4 @@
-#include <stdio.h>
+﻿#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
@@ -180,6 +180,8 @@ int main() {
 	// typedef int (*函数指针) (整型, 整型);
 
 	// //此时point就相当于定义上一条件的所有类别；
+	// 
+	// 
 	// 函数指针 加法 = Fun3;
 
 
@@ -194,28 +196,39 @@ int main() {
 
 	 FILE* Pfile = NULL;
 
-	 fopen_s(&Pfile,"D:\\haker\\123.txt", "r");
-
+	 int  error = fopen_s(&Pfile,"D:\\haker\\123.txt", "r");
+	 printf("\n%d\n", error);
 
 	 //printf("\n%p\n", f);
 
 
-	 //读文件
-	 char ch = 0;
-	 printf("\n");
-	 while ((ch = fgetc(Pfile)) != EOF) {
-		 printf("%c", ch);
+	
+
+
+	 if(error == 0){ 
+		 
+			//读文件
+			char ch = 0;
+			printf("\n");
+			while ((ch = fgetc(Pfile)) != EOF) {
+			 printf("%c", ch);
+			}
+
+			fseek(Pfile, 0, SEEK_SET);   //将指针修正到文件头部分
+
+			char pointer[256] = { 0 };
+			printf("\n");
+			while (fgets(pointer, 256, Pfile) != NULL) {
+			    printf("%s", pointer);
+			}
+		    fclose(Pfile); 
+	 
 	 }
 
-	 char pointer[256] = { 0 };
-	 printf("\n");
-	 while (fgets(pointer, 256, Pfile) != NULL) {
-		 printf("%s", pointer);
+	 else if (error != 0) {
+		 printf("打开文件失败");
 	 }
-
-
-
-	 fclose(Pfile);
+	 
 
 
 
