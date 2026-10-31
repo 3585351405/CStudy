@@ -149,6 +149,12 @@ int main() {
 
 	整型 血量 = 11111;
 
+	
+
+	
+
+
+
 
 
 
@@ -188,10 +194,25 @@ int main() {
 
 	 FILE* Pfile = NULL;
 
-	 int* f = fopen_s(&Pfile,"D:\\haker\\1234.txt", "r");
+	 fopen_s(&Pfile,"D:\\haker\\123.txt", "r");
 
 
-	 printf("\n%p\n", f);
+	 //printf("\n%p\n", f);
+
+
+	 //读文件
+	 char ch = 0;
+	 printf("\n");
+	 while ((ch = fgetc(Pfile)) != EOF) {
+		 printf("%c", ch);
+	 }
+
+	 char pointer[256] = { 0 };
+	 printf("\n");
+	 while (fgets(pointer, 256, Pfile) != NULL) {
+		 printf("%s", pointer);
+	 }
+
 
 
 	 fclose(Pfile);
